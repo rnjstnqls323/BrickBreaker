@@ -12,9 +12,9 @@ StartScene::~StartScene()
 
 void StartScene::Update()
 {
-	if (Input::IsKeyDown(VK_F12))
+	if (Input::Get()->IsKeyDown(VK_F1))
 	{
-
+		SCENE->ChangeScene("Play");
 	}
 }
 

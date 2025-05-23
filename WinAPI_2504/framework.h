@@ -82,6 +82,8 @@ typedef XMFLOAT4X4 Float4x4;
 #include "Objects/Collider/CircleCollider.h"
 #include "Objects/Collider/RectCollider.h"
 
+#include "Objects/Player/Player.h"
+
 #include "Objects/Manger/DataManager.h"
 #include "Objects/Manger/EventManager.h"
 

@@ -33,7 +33,7 @@ public:
 	Vector2 Size() { return size * GetGlobalScale(); }
 	Vector2 Half() { return Size() * 0.5f; }
 
-private:
+protected:
 	void MakeMesh() override;
 
 	bool IsAABB(RectCollider* rect, Vector2* overlap);
@@ -42,7 +42,7 @@ private:
 	bool IsSeperateAxis(const Vector2& seperateAxis,
 		const ObbDesc& box1, const ObbDesc& box2);
 
-private:
+protected:
 	ObbDesc obbDesc;
 
 	Vector2 size;

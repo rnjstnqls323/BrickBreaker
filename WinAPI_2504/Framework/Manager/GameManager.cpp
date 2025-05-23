@@ -1,11 +1,13 @@
 #include "Framework.h"
 #include "Scenes/StartScene.h"
+#include "Scenes/PlayScene.h"
 
 GameManager::GameManager()
 {
 	Create();
 		
 	SCENE->AddScene("Start", new StartScene());
+	SCENE->AddScene("Play", new PlayScene());
 
 	SCENE->ChangeScene("Start");
 }
