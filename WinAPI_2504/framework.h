@@ -83,7 +83,10 @@ typedef XMFLOAT4X4 Float4x4;
 #include "Objects/Collider/RectCollider.h"
 
 #include "Objects/Player/Player.h"
-#include "Objects/Player/Ball.h"
+#include "Objects/Ball/Ball.h"
+#include "Objects/Brick/Brick.h"
+
+#include "Objects/Ball/BallManager.h"
 
 #include "Objects/Manger/DataManager.h"
 #include "Objects/Manger/EventManager.h"

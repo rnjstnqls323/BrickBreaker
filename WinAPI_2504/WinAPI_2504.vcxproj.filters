@@ -114,7 +114,13 @@
     <ClInclude Include="Objects\Player\Player.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Objects\Player\Ball.h">
+    <ClInclude Include="Objects\Ball\Ball.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Ball\BallManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Brick\Brick.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -197,7 +203,10 @@
     <ClCompile Include="Objects\Player\Player.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Objects\Player\Ball.cpp">
+    <ClCompile Include="Objects\Ball\Ball.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Ball\BallManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

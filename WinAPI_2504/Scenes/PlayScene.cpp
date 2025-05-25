@@ -4,23 +4,35 @@
 PlayScene::PlayScene()
 {
 	player = new Player;
-	ball = new Ball;
+	BallManager::Get();
+
+	playerSpaceBall = { 0,player->Size().y};
 }
 
 PlayScene::~PlayScene()
 {
 	delete player;
-	delete ball;
+	BallManager::Delete();
 }
 
 void PlayScene::Update()
 {
 	player->Update();
-	ball->Update();
+	BallManager::Get()->PushSpace(player->GetLocalPosition() + playerSpaceBall);
+	BallManager::Get()->Update(player);
 }
 
 void PlayScene::Render()
 {
 	player->Render();
-	ball->Render();
+	BallManager::Get()->Render();
 }
+
+//void PlayScene::GUIRender()
+//{
+//	ball->Edit();
+//
+//	ImGui::DragFloat2("Overlap", (float*)&overlap);
+//}
+
+
