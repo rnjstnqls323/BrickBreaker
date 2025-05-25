@@ -9,7 +9,7 @@ GameManager::GameManager()
 	SCENE->AddScene("Start", new StartScene());
 	SCENE->AddScene("Play", new PlayScene());
 
-	SCENE->ChangeScene("Start");
+	SCENE->ChangeScene("Play");
 }
 
 GameManager::~GameManager()

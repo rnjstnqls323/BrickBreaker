@@ -7,6 +7,7 @@ GameObject::GameObject()
 
     worldBuffer = new MatrixBuffer();
     colorBuffer = new ColorBuffer();
+
 }
 
 GameObject::GameObject(wstring shaderFile)

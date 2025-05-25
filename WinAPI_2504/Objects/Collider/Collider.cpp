@@ -25,17 +25,22 @@ void Collider::Render()
 {
     if (!isActive) return;
 
-    worldBuffer->Set(world);
-    worldBuffer->SetVS(0);
+    if (!indices.size())
+    {
+        worldBuffer->Set(world);
+        worldBuffer->SetVS(0);
 
-    colorBuffer->SetPS(0);
+        colorBuffer->SetPS(0);
 
-    vertexBuffer->Set(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP);    
+        vertexBuffer->Set(D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
-    vertexShader->Set();
-    pixelShader->Set();
+        vertexShader->Set();
+        pixelShader->Set();
 
-    DC->Draw(vertices.size(), 0);
+        DC->Draw(vertices.size(), 0);
+    }
+    else
+        GameObject::Render();
 }
 
 void Collider::MakeMesh()

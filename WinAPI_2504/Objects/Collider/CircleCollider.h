@@ -17,6 +17,6 @@ public:
 
 private:
 	void MakeMesh() override;
-private:
+protected:
 	float radius;	
 };

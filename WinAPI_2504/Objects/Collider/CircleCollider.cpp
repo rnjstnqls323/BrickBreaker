@@ -4,7 +4,6 @@ CircleCollider::CircleCollider(float radius) : radius(radius)
 {
 	type = Type::Circle;
 
-	Init();
 }
 
 CircleCollider::~CircleCollider()

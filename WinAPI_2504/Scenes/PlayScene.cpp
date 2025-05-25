@@ -4,19 +4,23 @@
 PlayScene::PlayScene()
 {
 	player = new Player;
+	ball = new Ball;
 }
 
 PlayScene::~PlayScene()
 {
 	delete player;
+	delete ball;
 }
 
 void PlayScene::Update()
 {
-	player->UpdateWorld();
+	player->Update();
+	ball->Update();
 }
 
 void PlayScene::Render()
 {
 	player->Render();
+	ball->Render();
 }

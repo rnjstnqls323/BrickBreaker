@@ -12,4 +12,5 @@ public :
 
 private:
 	Player* player;
+	Ball* ball;
 };

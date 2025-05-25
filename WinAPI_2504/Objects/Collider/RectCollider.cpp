@@ -3,8 +3,6 @@
 RectCollider::RectCollider(Vector2 size) : size(size)
 {
     type = Type::Rect;
-
-    Init();
 }
 
 //AABB
