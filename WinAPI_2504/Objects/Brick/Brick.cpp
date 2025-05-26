@@ -21,19 +21,19 @@ void Brick::SettingColor(ColorType color)
 {
     switch (color)
     {
-    case Brick::Red:
+    case Red:
         SetColor(1, 0, 0);
         break;
-    case Brick::Orange:
+    case Orange:
         SetColor(1, 0.5, 0);
         break;
-    case Brick::Yellow:
+    case Yellow:
         SetColor(1, 1, 0);
         break;
-    case Brick::Green:
+    case Green:
         SetColor(0, 1, 0);
         break;
-    case Brick::Gray:
+    case Gray:
         SetColor(0.8, 0.8, 0.8);
         break;
     }

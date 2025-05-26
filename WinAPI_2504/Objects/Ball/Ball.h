@@ -13,6 +13,7 @@ public:
 	void ChangeSpawn(Vector2 pos);
 
 	bool IsMove() { return isMove; }
+	void SetIsMove(bool move) { isMove = move; }
 
 	void ChangeCrashDirection(Vector2 overlap){ direction = overlap * -1; }
 private:

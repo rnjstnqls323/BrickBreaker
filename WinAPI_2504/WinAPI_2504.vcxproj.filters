@@ -126,7 +126,10 @@
     <ClInclude Include="Objects\Brick\BrickManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Objects\Brick\BrickSettingManager.h">
+    <ClInclude Include="Objects\Brick\BrickDataManager.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Brick\StageManager.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -221,6 +224,12 @@
     <ClCompile Include="Objects\Brick\BrickManager.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Objects\Brick\BrickDataManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Brick\StageManager.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_2504.rc">
@@ -238,5 +247,12 @@
   <ItemGroup>
     <FxCompile Include="Resources\Shaders\Tutorial.hlsl" />
     <FxCompile Include="Resources\Shaders\Collider.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tables\BrickDatas.csv" />
+    <None Include="Resources\Tables\StageDatas.csv" />
+    <None Include="Resources\Tables\StageData1.csv" />
+    <None Include="Resources\Tables\StageData2.csv" />
+    <None Include="Resources\Tables\StageData3.csv" />
   </ItemGroup>
 </Project>

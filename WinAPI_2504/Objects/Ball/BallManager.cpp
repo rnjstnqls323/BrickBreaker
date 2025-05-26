@@ -53,6 +53,16 @@ void BallManager::Render()
 	}
 }
 
+void BallManager::SetBallStart()
+{
+	for (Ball* ball : balls)
+	{
+		if (!ball->IsActive())
+			continue;
+		ball->SetIsMove(false);
+	}
+}
+
 bool BallManager::RectCollision(Ball*& ball, RectCollider*& rect)
 {
 

@@ -10,12 +10,22 @@ private:
 	BrickManager();
 	~BrickManager();
 
+	void SettingBrick(Brick*& brick);
+	bool CheckClear();
+
 public:
 	void Update();
 	void Render();
 
 	void BrickCollision(Ball*& ball);
+
+
 private:
+
+	int stage = 1;
+
 	Vector2 position = { 0,SCREEN_HEIGHT - 15 };
 	vector<Brick*> bricks;
+	queue<int> brickStage;
+
 };

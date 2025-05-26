@@ -2,17 +2,23 @@
 
 BrickManager::BrickManager()
 {
+
+	BrickDataManager::Get()->LoadData(BRICK_DATA_PATH);
+
+	brickStage = DataManager::Get()->GetStage();
+
 	bricks.resize(BRICK_POOL_SIZE);
 	int count = 0;
 	for (Brick*& brick : bricks)
 	{
 		brick = new Brick;
 
-		brick->SetActive(true);
-		brick->SetColorType(brick->ColorType::Red);
-		brick->SetHP((int)brick->ColorType::Red);
+		brick->SetActive(false);
 		position += {brick->Size().x * 0.5f , 0};
 		brick->SetLocalPosition(position);
+		SettingBrick(brick);
+		if (brick->GetColorType() != None)
+			brick->SetActive(true);
 		count++;
 		if (count == 10)
 		{
@@ -35,11 +41,48 @@ BrickManager::~BrickManager()
 	bricks.clear();
 }
 
+void BrickManager::SettingBrick(Brick*& brick)
+{
+	int key = 0;
+	if (!brickStage.empty()) {
+		 key= brickStage.front();  // ¾ÈÀü
+		brickStage.pop();
+	}
+	BrickData data = BrickDataManager::Get()->GetBrick(key);
+
+	brick->SetColorType(data.color);
+	brick->SetHP(data.healthPoint);
+
+	DataManager::Get()->ClearData();
+}
+
+bool BrickManager::CheckClear()
+{
+	for (Brick* brick : bricks)
+	{
+		if (brick->IsActive())
+			return false;
+	}
+	return true;;
+}
+
 void BrickManager::Update()
 {
 	for (Brick* brick : bricks)
 	{
 		brick->Update();
+	}
+	if (CheckClear())
+	{
+		StageManager::Get()->UpdateStage();
+		brickStage= DataManager::Get()->GetStage();
+		for (Brick* brick : bricks)
+		{
+			SettingBrick(brick);
+			if (brick->GetColorType() != None)
+				brick->SetActive(true);
+		}
+		BallManager::Get()->SetBallStart();
 	}
 }
 

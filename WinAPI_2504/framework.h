@@ -19,11 +19,14 @@
 #define DEVICE Device::Get()->GetDevice()
 #define DC Device::Get()->GetDeviceContext()
 
+#define BRICK_DATA_PATH "Resources/Tables/BrickDatas.csv"
+
 #include <windows.h>
 #include <string>
 #include <unordered_map>
 #include <map>
 #include <vector>
+#include <queue>
 #include <functional>
 #include <fstream>
 #include <assert.h>
@@ -68,6 +71,7 @@ typedef XMFLOAT4X4 Float4x4;
 #include "Framework/Shader/VertexShader.h"
 #include "Framework/Shader/PixelShader.h"
 
+
 #include "Framework/Buffer/VertexLayouts.h"
 #include "Framework/Buffer/VertexBuffer.h"
 #include "Framework/Buffer/IndexBuffer.h"
@@ -88,6 +92,8 @@ typedef XMFLOAT4X4 Float4x4;
 
 #include "Objects/Ball/BallManager.h"
 #include "Objects/Brick/BrickManager.h"
+#include "Objects/Brick/BrickDataManager.h"
+#include "Objects/Brick//StageManager.h"
 
 #include "Objects/Manger/DataManager.h"
 #include "Objects/Manger/EventManager.h"

@@ -13,6 +13,7 @@ public:
 	void Update(RectCollider* rect);
 	void PushSpace(Vector2 pos);
 	void Render();
+	void SetBallStart();
 
 	bool RectCollision(Ball*& ball, RectCollider*& rect);
 

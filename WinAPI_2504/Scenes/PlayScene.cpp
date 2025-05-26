@@ -3,9 +3,15 @@
 
 PlayScene::PlayScene()
 {
+	BrickDataManager::Get();
+	DataManager::Get();
+	StageManager::Get();
+
 	player = new Player;
 	BallManager::Get();
 	BrickManager::Get();
+
+
 	//brick = new Brick;
 	
 
@@ -20,6 +26,11 @@ PlayScene::~PlayScene()
 	BallManager::Delete();
 
 	BrickManager::Delete();
+
+	BrickDataManager::Delete();
+	DataManager::Delete();
+	StageManager::Delete();
+
 }
 
 void PlayScene::Update()
