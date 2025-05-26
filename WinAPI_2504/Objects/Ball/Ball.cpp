@@ -88,6 +88,12 @@ void Ball::CrashWall()
     {
         direction.y = direction.y * -1;
     }
+    if (pos.y <= 0)
+    {
+        BallManager::Get()->SetBallStart();
+        int life = LifeManager::Get()->GetLifeSize() - 1;
+        LifeManager::Get()->SetLifeSize(life);
+    }
 }
 
 void Ball::ChangeSpawn(Vector2 pos)

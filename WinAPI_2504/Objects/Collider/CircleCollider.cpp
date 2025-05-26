@@ -3,7 +3,6 @@
 CircleCollider::CircleCollider(float radius) : radius(radius)
 {
 	type = Type::Circle;
-
 }
 
 CircleCollider::~CircleCollider()

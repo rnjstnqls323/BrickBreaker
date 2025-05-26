@@ -16,7 +16,13 @@ public:
 	void SetBallStart();
 
 	bool RectCollision(Ball*& ball, RectCollider*& rect);
+	void AddSpeed();
+	void AddBall();
+
+	void BallClear();
+
 
 private:
+	int ballNum = 0;
 	vector<Ball*> balls;
 };

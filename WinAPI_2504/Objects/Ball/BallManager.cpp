@@ -9,6 +9,7 @@ BallManager::BallManager()
 		ball->SetActive(false);
 	}
 	balls[0]->SetActive(true);
+	ballNum++;
 }
 
 BallManager::~BallManager()
@@ -59,6 +60,7 @@ void BallManager::SetBallStart()
 	{
 		if (!ball->IsActive())
 			continue;
+		ball->SetUpDirection();
 		ball->SetIsMove(false);
 	}
 }
@@ -74,4 +76,34 @@ bool BallManager::RectCollision(Ball*& ball, RectCollider*& rect)
 
 	ball->ChangeCrashDirection(overlap);
 	return true;
+}
+
+void BallManager::AddSpeed()
+{
+	for (Ball* ball : balls)
+	{
+		if (!ball->IsActive())
+			continue;
+		ball->AddSpeed(50);
+	}
+}
+
+void BallManager::AddBall()
+{
+	if(ballNum<balls.size())
+		balls[ballNum++]->SetActive(true);
+}
+
+void BallManager::BallClear()
+{
+	for (Ball* ball : balls)
+	{
+		if (!ball->IsActive())
+			continue;
+		ball->SetActive(false);
+		ball->SetUpDirection();
+		ball->SetIsMove(false);
+	}
+	ballNum = 0;
+	balls[ballNum++]->SetActive(true);
 }

@@ -9,7 +9,7 @@ public:
 	~Player();
 
 	void Update();
-
+	void AddSpeed(int speed) { this->speed += speed; }
 private:
 	void MakeMesh() override;
 	void Move();

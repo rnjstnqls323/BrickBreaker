@@ -172,6 +172,10 @@
     <ClInclude Include="Objects\Manger\DataManager.h" />
     <ClInclude Include="Objects\Manger\EventManager.h" />
     <ClInclude Include="Objects\Ball\Ball.h" />
+    <ClInclude Include="Objects\Player\Item.h" />
+    <ClInclude Include="Objects\Player\ItemManager.h" />
+    <ClInclude Include="Objects\Player\Life.h" />
+    <ClInclude Include="Objects\Player\LifeManager.h" />
     <ClInclude Include="Objects\Player\Player.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Scenes\PlayScene.h" />
@@ -211,6 +215,10 @@
     <ClCompile Include="Objects\Manger\DataManager.cpp" />
     <ClCompile Include="Objects\Manger\EventManager.cpp" />
     <ClCompile Include="Objects\Ball\Ball.cpp" />
+    <ClCompile Include="Objects\Player\Item.cpp" />
+    <ClCompile Include="Objects\Player\ItemManager.cpp" />
+    <ClCompile Include="Objects\Player\Life.cpp" />
+    <ClCompile Include="Objects\Player\LifeManager.cpp" />
     <ClCompile Include="Objects\Player\Player.cpp" />
     <ClCompile Include="Scenes\PlayScene.cpp" />
     <ClCompile Include="Scenes\StartScene.cpp" />
@@ -242,6 +250,7 @@
     <None Include="Resources\Tables\StageData1.csv" />
     <None Include="Resources\Tables\StageData2.csv" />
     <None Include="Resources\Tables\StageData3.csv" />
+    <None Include="Resources\Tables\StageData4.csv" />
     <None Include="Resources\Tables\StageDatas.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

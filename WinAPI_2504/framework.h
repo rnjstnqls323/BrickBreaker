@@ -89,14 +89,19 @@ typedef XMFLOAT4X4 Float4x4;
 #include "Objects/Player/Player.h"
 #include "Objects/Ball/Ball.h"
 #include "Objects/Brick/Brick.h"
+#include "Objects/Player/Life.h"
+#include "Objects/Player/Item.h"
 
 #include "Objects/Ball/BallManager.h"
 #include "Objects/Brick/BrickManager.h"
 #include "Objects/Brick/BrickDataManager.h"
 #include "Objects/Brick//StageManager.h"
+#include "Objects/Player/LifeManager.h"
+#include "Objects/Player/ItemManager.h"
 
 #include "Objects/Manger/DataManager.h"
 #include "Objects/Manger/EventManager.h"
+
 
 #include "Scenes/Scene.h"
 #include "Framework/Manager/SceneManager.h"

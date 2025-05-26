@@ -104,9 +104,18 @@ void BrickManager::BrickCollision(Ball*& ball)
 
 		if (collision)
 		{
+			int brickColor = (int)brick->GetColorType() - 1;
 			brick->SetHP(brick->GetHP()-1);
-			if (brick->GetHP() == 0)
+			if(brick->GetColorType() != Gray)
+				brick->SetColorType((ColorType)brickColor);
+
+			if (brick->GetHP() == 0) {
+				int random = rand() % 2;
+				if(random == 0)
+					ItemManager::Get()->ActiveItem(brick->GetGlobalPosition());
 				brick->SetActive(false);
+			}
+
 		}
 	}
 }

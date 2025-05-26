@@ -20,4 +20,6 @@ void StageManager::UpdateStage()
 		return;
 	DataManager::Get()->ClearData();
 	DataManager::Get()->LoadData(stagePath[stage]);
+	BallManager::Get()->BallClear();
+	ItemManager::Get()->AllSetFalse();
 }

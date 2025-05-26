@@ -14,8 +14,10 @@ public:
 
 	bool IsMove() { return isMove; }
 	void SetIsMove(bool move) { isMove = move; }
+	void AddSpeed(int speed) { this->speed += speed; }
 
 	void ChangeCrashDirection(Vector2 overlap){ direction = overlap * -1; }
+	void SetUpDirection() { direction = Vector2::Up(); }
 private:
 	void MakeMesh() override;
 	void Move();
@@ -25,7 +27,7 @@ private:
 
 private:
 	bool isMove = false;
-	int speed = 300;
+	int speed = 400;
 
 	Vector2 direction;
 
