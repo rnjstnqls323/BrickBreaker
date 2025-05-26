@@ -20,14 +20,15 @@ BallManager::~BallManager()
 	balls.clear();
 }
 
-void BallManager::Update(Player* player)
+void BallManager::Update(RectCollider* rect)
 {
 	for (Ball* ball : balls)
 	{
 		if (!ball->IsActive())
 			continue;
  		ball->Update();
-		BarCollision(ball, player);
+		RectCollision(ball, rect);
+		BrickManager::Get()->BrickCollision(ball);
 	}
 }
 
@@ -52,14 +53,15 @@ void BallManager::Render()
 	}
 }
 
-void BallManager::BarCollision(Ball*& ball, Player*& player)
+bool BallManager::RectCollision(Ball*& ball, RectCollider*& rect)
 {
 
 	Vector2 overlap;
 
-	bool isCollision = ball->IsRectCollision(player, &overlap);
+	bool isCollision = ball->IsRectCollision(rect, &overlap);
 	if (!isCollision)
-		return;
+		return false;
 
 	ball->ChangeCrashDirection(overlap);
+	return true;
 }

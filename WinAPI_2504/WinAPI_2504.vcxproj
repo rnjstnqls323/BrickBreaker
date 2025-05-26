@@ -163,6 +163,8 @@
     <ClInclude Include="Objects\Ball\BallManager.h" />
     <ClInclude Include="Objects\Basic\GameObject.h" />
     <ClInclude Include="Objects\Brick\Brick.h" />
+    <ClInclude Include="Objects\Brick\BrickManager.h" />
+    <ClInclude Include="Objects\Brick\BrickSettingManager.h" />
     <ClInclude Include="Objects\Collider\CircleCollider.h" />
     <ClInclude Include="Objects\Collider\Collider.h" />
     <ClInclude Include="Objects\Collider\RectCollider.h" />
@@ -198,6 +200,8 @@
     <ClCompile Include="Framework\Utilities\Utility.cpp" />
     <ClCompile Include="Objects\Ball\BallManager.cpp" />
     <ClCompile Include="Objects\Basic\GameObject.cpp" />
+    <ClCompile Include="Objects\Brick\Brick.cpp" />
+    <ClCompile Include="Objects\Brick\BrickManager.cpp" />
     <ClCompile Include="Objects\Collider\CircleCollider.cpp" />
     <ClCompile Include="Objects\Collider\Collider.cpp" />
     <ClCompile Include="Objects\Collider\RectCollider.cpp" />

@@ -87,6 +87,7 @@ typedef XMFLOAT4X4 Float4x4;
 #include "Objects/Brick/Brick.h"
 
 #include "Objects/Ball/BallManager.h"
+#include "Objects/Brick/BrickManager.h"
 
 #include "Objects/Manger/DataManager.h"
 #include "Objects/Manger/EventManager.h"

@@ -10,12 +10,11 @@ private:
 	~BallManager();
 
 public:
-	void Update(Player* player);
+	void Update(RectCollider* rect);
 	void PushSpace(Vector2 pos);
 	void Render();
 
-private:
-	void BarCollision(Ball*& ball, Player*& player);
+	bool RectCollision(Ball*& ball, RectCollider*& rect);
 
 private:
 	vector<Ball*> balls;

@@ -13,6 +13,8 @@ public :
 
 private:
 	Player* player;
+	Brick* brick;
+	Ball* ball;
 
 	Vector2 overlap;
 	Vector2 playerSpaceBall;

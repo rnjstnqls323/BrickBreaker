@@ -17,5 +17,5 @@ private:
 private:
 	Vector2 halfSize = size * 0.5f;
 	Vector2 localPosition;
-	int speed = 200.0f;
+	int speed = 500.0f;
 };
