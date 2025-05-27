@@ -15,7 +15,7 @@ public:
 	void Render();
 	void SetBallStart();
 
-	bool RectCollision(Ball*& ball, RectCollider*& rect);
+	bool RectCollision(Ball*& ball, RectCollider*& rect, string tag);
 	void AddSpeed();
 	void AddBall();
 

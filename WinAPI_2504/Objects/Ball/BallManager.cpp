@@ -28,7 +28,7 @@ void BallManager::Update(RectCollider* rect)
 		if (!ball->IsActive())
 			continue;
  		ball->Update();
-		RectCollision(ball, rect);
+		RectCollision(ball, rect,"Bar");
 		BrickManager::Get()->BrickCollision(ball);
 	}
 }
@@ -65,12 +65,12 @@ void BallManager::SetBallStart()
 	}
 }
 
-bool BallManager::RectCollision(Ball*& ball, RectCollider*& rect)
+bool BallManager::RectCollision(Ball*& ball, RectCollider*& rect,string tag)
 {
 
 	Vector2 overlap;
 
-	bool isCollision = ball->IsRectCollision(rect, &overlap);
+	bool isCollision = ball->IsRectCollision(rect, &overlap,tag);
 	if (!isCollision)
 		return false;
 

@@ -100,7 +100,7 @@ void BrickManager::BrickCollision(Ball*& ball)
 	{
 		if (!brick->IsActive())
 			continue;
-		bool collision = BallManager::Get()->RectCollision(ball, (RectCollider*&)brick);
+		bool collision = BallManager::Get()->RectCollision(ball, (RectCollider*&)brick,"Brick");
 
 		if (collision)
 		{

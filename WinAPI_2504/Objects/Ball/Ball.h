@@ -18,6 +18,8 @@ public:
 
 	void ChangeCrashDirection(Vector2 overlap){ direction = overlap * -1; }
 	void SetUpDirection() { direction = Vector2::Up(); }
+	bool IsRectCollision(RectCollider* rect, Vector2* overlap, string tag);
+
 private:
 	void MakeMesh() override;
 	void Move();
